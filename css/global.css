@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+*:focus{
+    /* outline: 2px solid #fff; */
+    outline: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    background-size: cover;
+    background-color: #fff;
+    transition: all 0.3s linear;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Ubuntu", sans-serif;
+    background-image: url(/img/win11bg.jpg);
+}
+
+img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.taskbar {
+    bottom: 0;
+    width: 1920px;
+    color: #fff;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background-color: #1f1f1f;
+    justify-content: space-between;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.taskbar-left {
+    display: flex;
+    align-items: center;
+    margin-right: 170px;
+    justify-content: space-between;
+}
+
+.win-logo-btn {
+    /* width: 30px;
+    height: 30px; */
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+    padding: 7px 9px 7px 9px;
+}
+
+.win-logo-btn:hover {
+    background-color: #343434;
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/img/win-logo-blue.png);
+}
+
+.win-logo-btn:hover .win-logo-img {
+    opacity: 0;
+}
+
+.win-logo-img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.search-btn {
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 28px;
+    background: transparent;
+    transform: rotateY(180deg);
+    padding: 7px 10px 7px 10px;
+}
+
+.search-btn:hover {
+    background-color: #3f3f3f;
+}
+
+.taskbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 48px;
+    height: 44px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    padding: 7px 9px 7px 9px;
+}
+
+.btn:hover {
+    background-color: #3f3f3f;
+}
+
+.btn:active {
+    background-color: #4b4b4b;
+}
+
+.top-arrow-btn {
+    border: 0;
+    width: 30px;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 27px;
+    align-items: center;
+    background: transparent;
+    justify-content: center;
+    /* padding: 7px 10px 7px 10px; */
+}
+
+.volume-btn {
+    width: 30px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+    /* padding: 7px 10px 7px 10px; */
+}
+
+.battery-btn {
+    width: 30px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+    /* padding: 7px 10px 7px 10px; */
+}
+
+.date-and-time-wrapper {
+    padding: 5px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.time {
+    font-size: 12px;
+}
+
+.date {
+    font-size: 13px;
+}
+
+.date-and-time-wrapper:hover {
+    background-color: #3f3f3f;
+}
+
+.notification-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-desktop-btn {
+    border: none;
+    width: 3.72px;
+    height: 47.5px;
+    background-color: transparent;
+    border-left: 0.1px solid #8f8f8f;
+}
+
+.desktop-apps {
+    width: 266px;
+    padding: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-pc{
+    width: 128px;
+    height: 111px;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-pc:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.my-pc:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.my-pc-img {
+    width: 70px;
+    height: 70px;
+    display: block;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.my-pc-text {
+    font-size: 14px;
+    color: #fff;
+}
