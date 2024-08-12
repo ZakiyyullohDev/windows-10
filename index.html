@@ -11,93 +11,102 @@
 <body>
 
     <div class="desktop-apps">
-        <div class="my-pc">
+        <div class="my-pc" title="My Computer">
             <img src="img/my-pc-icon.png" class="my-pc-img" alt="My Computer" width="70" height="70">
             <h4 class="my-pc-text">My Computer</h3>
         </div>
-        <div class="my-pc" id="youtube">
-            <img src="img/Youtube-logo.png" class="my-pc-img" alt="Youtube" width="70" height="70">
+        <div class="my-pc" id="youtube" title="YouTube">
+            <img src="img/Youtube_logo.png" class="my-pc-img" alt="Youtube" width="70" height="70">
             <h4 class="my-pc-text">YouTube</h3>
         </div>
-        <div class="my-pc" id="minecraft">
-            <img src="img/minecraft.png" class="my-pc-img" alt="Youtube" width="70" height="70">
+        <div class="my-pc" id="minecraft" title="Minecraft Alpha">
+            <img src="img/minecraft.png" class="my-pc-img" alt="Minecarft" width="70" height="70">
             <h4 class="my-pc-text">Minecraft Alpha</h3>
         </div>
-        <div class="my-pc" id="lockScreen">
-            <img src="img/win11icon.png" class="my-pc-img" alt="Youtube" width="70" height="70">
+        <div class="my-pc" id="lockScreen" title="Press to lock the screen">
+            <img src="img/win11icon.png" class="my-pc-img" alt="Lock Screen" width="70" height="70">
             <h4 class="my-pc-text">Lock Screen</h3>
         </div>
-        <div class="my-pc" id="instagram">
-            <img src="img/Instagram_icon.png" class="my-pc-img" alt="Youtube" width="70" height="70">
+        <div class="my-pc" id="instagram" title="Instagram">
+            <img src="img/Instagram_icon.png" class="my-pc-img" alt="Instagram" width="70" height="70">
             <h4 class="my-pc-text">Instagram</h3>
         </div>
-        <div class="my-pc" id="monkeyType">
-            <img src="img/monkey-type.png" class="my-pc-img" alt="Youtube" width="70" height="70">
+        <div class="my-pc" id="monkeyType" title="Monkey Type">
+            <img src="img/monkey-type.png" class="my-pc-img" alt="MonkeyType" width="70" height="70">
             <h4 class="my-pc-text">MonkeyType</h3>
         </div>
     </div>
     
-    <div class="taskbar">
+    <div class="taskbar" id="taskbar">
 
         <div class="taskbar-left">
-            <button class="win-logo-btn btn">
+            <button class="win-logo-btn btn" title="Start">
                 <img src="img/win-10-img.png" class="win-logo-img" alt="win-logo" width="30" height="30">
             </button>
 
-            <button class="search-btn btn">
+            <button class="search-btn btn" title="Type here to search">
                 <i class="ri-search-2-line search-icon"></i>
             </button>
             
         </div>
         
         <div class="taskbar-center">
-            <button class="btn">
+            <button class="btn" title="Visuals Studio Code">
                 <img src="img/vs-code-logo.png" alt="vs-code" width="28" height="28">
             </button>
             
-            <button class="btn">
+            <button class="btn" title="Telegram">
                 <img src="img/telegram-icon.png" alt="telegram" width="28" height="28">
             </button>
-            <button class="btn">
+            <button class="btn" title="File Explorer">
                 <img src="img/file-explorer.png" alt="telegram" width="28" height="28">
             </button>
-            <button class="btn">
+            <button class="btn" title="Google Chrome">
                 <img src="img/google-chrome-icon.png" alt="telegram" width="28" height="28">
             </button>
-            <button class="btn">
+            <button class="btn" title="Command Prompt">
                 <img src="img/Icon-CMD.png" alt="telegram" width="28" height="28">
             </button>
         </div>
 
         <div class="taskbar-right">
-            <button class="top-arrow-btn btn">
+            <button class="top-arrow-btn btn" title="Show hidden icons">
                 <i class="ri-arrow-up-s-line top-arrow-icon"></i>
             </button>
-            <button class="volume-btn btn">
+            <button class="volume-btn btn" title="Speakers: 100%">
                 <i class="ri-volume-up-line volume-icon"></i>
             </button>
-            <button class="battery-btn btn">
+            <button class="battery-btn btn" title="100% avaible (unplugged)">
                 <i class="ri-battery-fill battery-icon"></i>
             </button>
+            <button class="wifi-btn btn" id="wifi-btn" title="The Bluetoth Device Is Connected Succesfully! 🤣">
+                <i class="ri-wifi-line wifi-icon"></i>
+            </button>
 
-            <button class="language-btn btn">
+            <button class="language-btn btn" title="English (United States)
+US keyboard
+
+To switch input methods, press
+Windows key+Space.">
                 ENG
             </button>
 
-            <div class="date-and-time-wrapper">
+            <div class="date-and-time-wrapper" id="dateAndTimeWrapper" title="Monday, August 12, 2024">
                 <p class="time" id="time">12:35</p>
                 <p class="date" id="date">8/10/2024</p>
             </div>
 
-            <button class="notification-btn btn">
+            <button class="notification-btn btn" title="No new notificatons">
                 <img src="img/notification-icon.png" alt="notification" width="20" height="20">
             </button>
 
-            <button class="show-desktop-btn"> </button>
+            <button class="show-desktop-btn" title="Show Desktop"> </button>
 
         </div>
 
     </div>
+
+    <audio class="display-none" src="sound/the-bluetooth-device-is-connected-successfully-sound-made-with-Voicemod.mp3" id="memeSound"></audio>
 
     <script src="js/app.js"></script>
 </body>
