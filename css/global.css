@@ -3,6 +3,7 @@
 
 html {
     overflow: none;
+    cursor: url(/pictures/mac-cursor-1.png), auto;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -56,6 +57,10 @@ img {
     clip: rect(0 0 0 0);
 }
 
+:root {
+    --default-radius: 8px;
+}
+
 .taskbar {
     bottom: 0;
     width: 1920px;
@@ -83,7 +88,7 @@ img {
 
 .win-logo-btn {
     border: 0;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     background: transparent;
     padding: 7px 9px 7px 9px;
 }
@@ -109,8 +114,8 @@ img {
 .search-btn {
     border: 0;
     color: #fff;
-    cursor: pointer;
-    font-size: 28px;
+    cursor: url(/pictures/mac-pointer.png), auto;
+    font-size: 22px;
     background: transparent;
     transform: rotateY(180deg);
     padding: 7px 10px 7px 10px;
@@ -128,6 +133,7 @@ img {
 
 .taskbar-right {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
 }
@@ -137,7 +143,7 @@ img {
     height: 38px;
     border: 0;
     color: #fff;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     border-radius: 4px;
     margin: 5px 3px;
     background: transparent;
@@ -157,7 +163,7 @@ img {
     width: 30px;
     color: #fff;
     display: flex;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     font-size: 27px;
     align-items: center;
     background: transparent;
@@ -168,7 +174,7 @@ img {
     width: 30px;
     border: 0;
     color: #fff;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     font-size: 15px;
     background: transparent;
 }
@@ -177,7 +183,7 @@ img {
     width: 30px;
     border: 0;
     color: #fff;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     font-size: 15px;
     background: transparent;
 }
@@ -187,7 +193,7 @@ img {
     width: 30px;
     color: #fff;
     display: flex;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     font-size: 18px;
     align-items: center;
     background: transparent;
@@ -212,7 +218,7 @@ img {
     padding: 5px;
     height: 38px;
     display: flex;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     border-radius: 4px;
     align-items: center;
     flex-direction: column;
@@ -257,12 +263,7 @@ img {
 .desktop-apps {
     width: 1900px;
     height: 900px;
-    padding: 5px;
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
-    /* grid-gap: 10px; */
-    align-items: center;
-    justify-items: center;
+    padding: 5px var(--default-radius);
 }
 
 .my-pc {
@@ -270,7 +271,7 @@ img {
     height: 111px;
     display: flex;
     padding: 10px;
-    cursor: pointer;
+    cursor: url(/pictures/mac-pointer.png), auto;
     border-radius: 5px;
     align-items: center;
     position: relative;
@@ -286,6 +287,14 @@ img {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url(/img/my-pc-icon.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 #chatGpt {
@@ -293,14 +302,29 @@ img {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url(/img/chat-gpt.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 #monkeyType {
     background-size: 70px 70px;
     background-repeat: no-repeat;
-    
     background-position: center bottom;
     background-image: url(/img/monkey-type.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 #lockScreen {
@@ -308,6 +332,14 @@ img {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url(/img/win11icon.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 #youtube {
@@ -315,6 +347,14 @@ img {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url(/img/Youtube_logo.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 #minecraft {
@@ -322,6 +362,14 @@ img {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url(/img/minecraft.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 #instagram {
@@ -329,6 +377,14 @@ img {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url(/img/Instagram_icon.png);
+
+    &:hover {
+        cursor: url(/pictures/cursor-grab.png), auto;
+    }
+
+    &:active {
+        cursor: url(/pictures/cursor-grabbing.png), auto;
+    }
 }
 
 .my-pc:hover {
@@ -388,4 +444,77 @@ img {
 
 .display-flex {
     display: flex;
+}
+
+.hidden-icons-wrapper {
+    width: 82px;
+    height: 82px;
+    bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    align-items: center;
+    transition: all .3s linear;
+    background-color: #242424;
+    justify-content: space-between;
+    border-radius: var(--default-radius);
+    animation: toOpacityOne 1s linear forwards;
+}
+
+.hidden-icons {
+    width: 17px;
+    height: 17px;
+    padding: 12px;
+
+    &:hover {
+        background-color: #3a3a3a;
+    }
+
+    &:active {
+        background-color: #4a4a4a;
+    }
+
+    &:nth-child(1) {
+        border-top-left-radius: var(--default-radius);
+    }
+
+    &:nth-child(2) {
+        border-top-right-radius: var(--default-radius);
+    }
+
+    &:nth-child(3) {
+        border-bottom-left-radius: var(--default-radius);
+    }
+
+    &:nth-child(4) {
+        
+        border-bottom-right-radius: var(--default-radius);
+    }
+
+}
+
+summary {
+    width: 30px;
+    height: 38px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    list-style-type: none;
+    justify-content: center;
+    
+    &:hover {
+        cursor: url(/pictures//mac-pointer.png);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+}
+
+@keyframes toOpacityOne {
+    to {
+        opacity: 1;
+    }
 }
