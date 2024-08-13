@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 html {
+    overflow: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -9,10 +10,9 @@ html {
 * {
     margin: 0;
     padding: 0;
-    user-select: none;
+    /* user-select: none;
     -webkit-user-drag: none;
-    -webkit-user-select: none;
-    transition: all 0.1s ease-in-out;
+    -webkit-user-select: none; */
 }
 
 *:focus{
@@ -26,13 +26,13 @@ html {
 }
 
 body {
-
     color: #222;
     height: 100vh;
+    overflow: none;
     font-size: 16px;
     background-size: cover;
     background-color: #fff;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     background-position: center;
     background-repeat: no-repeat;
     font-family: "Ubuntu", sans-serif;
@@ -138,16 +138,17 @@ img {
     border: 0;
     color: #fff;
     cursor: pointer;
+    border-radius: 5px;
     background: transparent;
     padding: 7px 9px 7px 9px;
-}
 
-.btn:hover {
-    background-color: #3f3f3f;
-}
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
 
-.btn:active {
-    background-color: #4b4b4b;
+    &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .top-arrow-btn {
@@ -217,10 +218,14 @@ img {
 
 .date-and-time-wrapper {
     height: 47.5px;
-}
 
-.date-and-time-wrapper:hover {
-    background-color: #3f3f3f;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .notification-btn {
@@ -235,10 +240,14 @@ img {
     height: 47.5px;
     background-color: transparent;
     border-left: 0.1px solid #8f8f8f;
-}
 
-.show-desktop-btn:hover {
-    background-color: #3f3f3f;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .show-desktop-btn:active {
@@ -247,15 +256,17 @@ img {
 
 
 .desktop-apps {
-    width: 266px;
+    width: 1900px;
+    height: 900px;
     padding: 5px;
-    flex-wrap: wrap;
-    display: flex;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-gap: 10px; */
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
 }
 
-.my-pc{
+.my-pc {
     width: 128px;
     height: 111px;
     display: flex;
@@ -263,8 +274,62 @@ img {
     cursor: pointer;
     border-radius: 5px;
     align-items: center;
+    position: relative;
     flex-direction: column;
+    background-color: transparent;
     justify-content: space-between;
+
+    transition: background-color 0.3s ease;
+}
+
+#myComputer {
+    background-size: 70px 70px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(/img/my-pc-icon.png);
+}
+
+#chatGpt {
+    background-size: 70px 70px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(/img/chat-gpt.png);
+}
+
+#monkeyType {
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    
+    background-position: center bottom;
+    background-image: url(/img/monkey-type.png);
+}
+
+#lockScreen {
+    background-size: 70px 70px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(/img/win11icon.png);
+}
+
+#youtube {
+    background-size: 70px 70px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(/img/Youtube_logo.png);
+}
+
+#minecraft {
+    background-size: 70px 70px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(/img/minecraft.png);
+}
+
+#instagram {
+    background-size: 70px 70px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(/img/Instagram_icon.png);
 }
 
 .my-pc:hover {
@@ -287,6 +352,7 @@ img {
     font-size: 14px;
     color: #fff;
 }
+
 
 [title]:hover::after {
     opacity: 1;
